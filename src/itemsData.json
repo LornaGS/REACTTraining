@@ -1,0 +1,17 @@
+
+
+
+[
+  {
+    "id": 1,
+    "symbol": "1",
+    "name": "Digit One",
+    "unicodeVal": "🎂"
+  },
+  {
+    "id": 2,
+    "symbol": "2",
+    "name": "Digit Two",
+    "unicodeVal": "🥳"
+  }
+]
