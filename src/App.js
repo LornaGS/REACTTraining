@@ -1,11 +1,11 @@
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 // quick lab 8 - state in react
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/navbar'
 import './App.css';
 import itemsData  from './itemsData'
-import ItemCard from './components/items';
+import Item from './components/items';
 import Calc from './components/calc';
 import addconfetti from './components/addconfetti';
 import Card from './components/card';
@@ -16,8 +16,24 @@ import ChangeState from './components/changeState';
 import CounterDisplay from './components/counterDisplay';
 import ResetButton from './components/resetButton';
 import IncrementButton from './components/incrementButton';
+import Logging from './components/Logging';
+import CountingConfetti from './components/CountingConfetti';
+import ExternalDogAPI from './components/ExternalDogApi';
+import CollectData from './components/CollectData';
+import CreateAnimal from './components/CreateAnimal';
+import CreateUsers from './components/CreateUsers';
+import ItemCard from './components/ItemCard'
+import CartList from './components/CartList'
+import ItemsList from './components/ItemList'
+import { CartProvider } from './context/cart-context'
+
+
 
 function App() {
+ 
+
+
+// for UseState
   const [count, setCount] = useState(0)
     
     function handleIncrement() {
@@ -51,9 +67,68 @@ function App() {
 
         </BrowserRouter>
 
+        <hr/>
+         <br/>
+{/* 
+         quick lab 13  context - adding items to cart 
+         3 components itemlist, itemcard cartlist, 
+         1 data file itemsdata.json
+         context folder with cart-context*/}
+
+         <h1>React Fruit Market</h1>
+          <CartProvider>
+            <CartList />
+            <ItemsList />
+          </CartProvider>
+
+            
+
+         <hr/>
+         <br/>
+
+         <Logging/>
+
+         <hr/>
+         <br/>
+
+{/* lab 10 - useeffect &  */}
+         
+         <CountingConfetti />
+
+
+{/* 
+         lab 11 - API */}
+
+        <hr/>
+         <br/>
+
+         <ExternalDogAPI />
+
+         <hr/>
+         <br/>
+
+         <CollectData />
+
+         <hr/>
+         <br/>
+
+         <CreateAnimal />
+
+         <hr/>
+         <br/>
+
+         {/* quick lab 12 */}
+
+        <CreateUsers />
+
+        <hr/>
+         <br/>
+
         <ChangeState />
 
-        
+        <hr/>
+         <br/>
+
         <CounterDisplay count={count} />
 
         <IncrementButton increment={handleIncrement} /> 
@@ -86,7 +161,7 @@ function App() {
          <br/>
       <div className="item-grid"> </div>
       {itemsData.map((item) => (
-        <ItemCard
+        <Item
         name = {item.name}
         symbol = {item.symbol}
         unicodeVal = {item.unicodeVal}

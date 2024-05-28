@@ -1,0 +1,40 @@
+{
+  "animals": [
+    {
+      "name": "Lion",
+      "species": "African",
+      "age": 8,
+      "id": "1"
+    },
+    {
+      "name": "Crocodile",
+      "species": "Salt Water",
+      "age": 25,
+      "id": "2"
+    },
+    {
+      "name": "Cat",
+      "species": "furry",
+      "age": 4,
+      "id": "3"
+    },
+    {
+      "id": "ca7e",
+      "name": "dog",
+      "species": "cava",
+      "age": "6"
+    },
+    {
+      "id": "509d",
+      "name": "dog",
+      "species": "cava",
+      "age": "6"
+    }
+  ],
+  "dogs": [
+    {
+      "name": "dogs",
+      "id": "f2ad"
+    }
+  ]
+}
